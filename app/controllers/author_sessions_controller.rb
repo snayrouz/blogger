@@ -2,6 +2,7 @@ class AuthorSessionsController < ApplicationController
   before_action :require_login
 
   def new
+    render action: :new
   end
 
   def create
