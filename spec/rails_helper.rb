@@ -30,10 +30,10 @@ DatabaseCleaner.strategy = :truncation
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-  c.before(:all) do
+  config.before(:all) do
     DatabaseCleaner.clean
   end
-  c.after(:each) do
+  config.after(:each) do
     DatabaseCleaner.clean
   end
 
